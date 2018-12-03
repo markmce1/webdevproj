@@ -39,7 +39,6 @@ else
             </nav>
          </header>
       </div>
-	  <div id="content">
 
 <?php
 	  
@@ -119,8 +118,7 @@ else
 				 
 
 ?>
-		</div>
-  
+
     
     
     
@@ -138,8 +136,30 @@ else
 
         </form>
     
-    
-    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<div class = "fadeinout" id="fadetext"> <h1> Books</h1>  
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<div class = "fadeinout" id="fadetext"> <h1> </h1>  
+            <script>
+			fadeloop('#fadetext', 1500,1200,true);
+			
+			function fadeloop(el, timeout, timein, loop)
+			{
+				var $el = $(el),intID,fn = function()
+					{
+						$el.fadeOut(timeout).fadeIn(timein);
+					};
+					fn();
+					if(loop)
+					{
+						intId = setInterval(fn,timeout+timein+100);
+						return intId;
+					}
+				return false;
+			}
+			</script>
+		</div>
+  
 		
 		<div id="navbar2" style="margin-left:45%" class="w3-container">
 		<?php $range = 3;
